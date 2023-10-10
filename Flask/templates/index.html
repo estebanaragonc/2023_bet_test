@@ -23,6 +23,9 @@
           <th>Fanduel</th>
           <th>Draftkings</th>
           <th>Betmgm</th>
+          <th>Fanduel XGB</th>
+          <th>Draftkings XGB</th>
+          <th>Betmgm XGB</th>
       </thead>
         <tbody>
         <tr>
@@ -41,7 +44,7 @@
               </tbody>
             </table>
             </td>
-            {% for sportsbook in ['fanduel', 'draftkings', 'betmgm'] %}
+            {% for sportsbook in ['fanduel', 'draftkings', 'betmgm', 'fanduel_xgb', 'draftkings_xgb', 'betmgm_xgb'] %}
             {% set sbgame = data.get(sportsbook)[game_key] %}
             {% if not sbgame or not sbgame.away_team or not sbgame.home_team %}
             <td class="{{sportsbook}}"></td>
