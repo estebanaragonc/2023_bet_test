@@ -25,17 +25,17 @@ def fetch_betmgm(ttl_hash=None):
 @lru_cache()
 def fetch_fanduel_xgb(ttl_hash=None):
     del ttl_hash
-    return fetch_game_data_xgb(sportsbook="fanduel_xgb")
+    return fetch_game_data_xgb(sportsbook="fanduel")
 
 @lru_cache()
 def fetch_draftkings_xgb(ttl_hash=None):
     del ttl_hash
-    return fetch_game_data_xgb(sportsbook="draftkings_xgb")
+    return fetch_game_data_xgb(sportsbook="draftkings")
 
 @lru_cache()
 def fetch_betmgm_xgb(ttl_hash=None):
     del ttl_hash
-    return fetch_game_data(sportsbook="betmgm_xgb")
+    return fetch_game_data(sportsbook="betmgm")
 
 def fetch_game_data(sportsbook="fanduel"):
     cmd = ["python", "main.py", "-nn", f"-odds={sportsbook}"]
